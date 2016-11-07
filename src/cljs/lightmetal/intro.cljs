@@ -3,12 +3,12 @@
 
 (enable-console-print!)
 
-(def intro-state (reagent/atom {:text "Hello world! from intro"}))
+(def app-state (reagent/atom {:text "Hello world! from intro"}))
 
 (defn -main []
   [:div.contaner
-   [:h1 (@intro-state :text)]])
+   [:h1 (@app-state :text)]])
 
 (reagent/render
   [-main]
-  (js/document.getElementById "intro-app"))
+  (js/document.getElementById "app"))

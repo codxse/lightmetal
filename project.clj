@@ -1,6 +1,6 @@
 (defproject lightmetal "0.1.0-SNAPSHOT"
-  :description "FIXME: write description"
-  :url "http://example.com/FIXME"
+  :description "Biolerplate for clojure as backend server and clojurescript as frontend"
+  :url "https://github.com/codxse/lightmetal"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :main lightmetal.core
@@ -10,9 +10,13 @@
                  [reagent "0.6.0"]]
   :plugins [[lein-cljsbuild "1.1.4"]
             [lein-figwheel "0.5.8"]]
+  ;; Figwheel server side configuration
+  ;; https://github.com/bhauman/lein-figwheel#figwheel-server-side-configuration
+  :figwheel {:css-dirs ["resources/public/css"]
+             :ring-handler lightmetal.core/handler}
   :cljsbuild {:builds [{:id "dev"
                         :source-paths ["src/cljs"]
-                        :figwheel false
+                        :figwheel true
                         ;; compailer option read here
                         ;; https://github.com/clojure/clojurescript/wiki/Compiler-Options
                         :compiler {:optimizations :none

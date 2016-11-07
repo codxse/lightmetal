@@ -2,22 +2,24 @@
 
 A Clojure server in the backend and ClojureScript in the frontend. Used for private only, not yet tested.
 
-Will implemented:
+Implemented:
 - reagent √
-- figwheel X
+- figwheel √
 - ring as backend server X
 
 ## Usage
 
+Development mode
 ```
-lein cljsbuild once
+lein figwheel
 ```
-
-FIXME
+Production mode (not yet working well)
+```
+lein cljsbuild once prod
+```
 
 ## License
 
 Copyright © 2016
 
-Distributed under the Eclipse Public License either version 1.0 or (at
-your option) any later version.
+Distributed under the Eclipse Public License either version 1.0 or any later version.

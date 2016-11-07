@@ -3,12 +3,12 @@
 
 (enable-console-print!)
 
-(def index-state (reagent/atom {:text "Hello world! from index"}))
+(def app-state (reagent/atom {:text "Hello world! from index"}))
 
 (defn -main []
   [:div.container
-   [:h1 (@index-state :text)]])
+   [:h1 (@app-state :text)]])
 
 (reagent/render
   [-main]
-  (js/document.getElementById "index-app"))
+  (js/document.getElementById "app"))
