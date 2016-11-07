@@ -3,6 +3,7 @@
   :url "https://github.com/codxse/lightmetal"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
+  :source-paths ["src/clj"]
   :main lightmetal.core
   :dependencies [[org.clojure/clojure "1.8.0"]
                  [org.clojure/core.async "0.2.395"]
